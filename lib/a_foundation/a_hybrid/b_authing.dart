@@ -79,7 +79,6 @@ class Authing {
   // --------------------
   /// TESTED : WORKS PERFECT
   static Future<bool> deleteUser({
-    required String userID,
     Function(String? error)? onError,
   }) async {
     bool _success;
@@ -143,33 +142,6 @@ class Authing {
         return NativeAuthing.getAuthEmail();
       }
 
-  }
-  // --------------------
-  /// TESTED : WORKS PERFECT
-  static bool userIsSignedUp(SignInMethod? method){
-
-    if (
-    method == null ||
-    method == SignInMethod.anonymous
-    ){
-      return false;
-    }
-    else {
-      return true;
-    }
-
-  }
-  // --------------------
-  /// TESTED : WORKS PERFECT
-  static bool checkIsSocialSignInMethod(SignInMethod? method){
-    switch (method){
-      case SignInMethod.anonymous: return false;
-      case SignInMethod.password:  return false;
-      case SignInMethod.google:    return true;
-      case SignInMethod.facebook:  return true;
-      case SignInMethod.apple:     return true;
-      default: return false;
-    }
   }
   // -----------------------------------------------------------------------------
 
