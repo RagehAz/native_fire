@@ -1,0 +1,147 @@
+library super_fire;
+// -----------------------------------------------------------------------------
+
+/// IMPORTS
+
+// --------------------
+/// COMMON
+import 'package:basics/bldrs_theme/classes/colorz.dart';
+import 'package:basics/bldrs_theme/classes/iconz.dart';
+import 'package:basics/filing/filing.dart';
+import 'package:basics/helpers/checks/device_checker.dart';
+import 'package:basics/helpers/checks/error_helpers.dart';
+import 'package:basics/helpers/checks/errorize.dart';
+import 'package:basics/helpers/checks/object_check.dart';
+import 'package:basics/helpers/checks/tracers.dart';
+import 'package:basics/helpers/maps/lister.dart';
+import 'package:basics/helpers/maps/mapper.dart';
+import 'package:basics/helpers/maps/mapper_ss.dart';
+import 'package:basics/helpers/nums/numeric.dart';
+import 'package:basics/helpers/rest/rest.dart';
+import 'package:basics/helpers/space/scale.dart';
+import 'package:basics/helpers/strings/pathing.dart';
+import 'package:basics/helpers/strings/stringer.dart';
+import 'package:basics/helpers/strings/text_check.dart';
+import 'package:basics/helpers/strings/text_mod.dart';
+import 'package:basics/helpers/time/timers.dart';
+import 'package:basics/components/super_box/super_box.dart';
+import 'package:basics/mediator/models/media_models.dart';
+import 'package:fire/super_fire.dart';
+import 'package:flutter/material.dart';
+import 'dart:async';
+/// NATIVE IMPLEMENTATION
+import 'package:firedart/firedart.dart' as fd;
+import 'package:firebase_dart/firebase_dart.dart' as f_d; // https://github.com/appsup-dart/firebase_dart/issues/53
+import 'package:firedart/auth/user_gateway.dart' as fd_u;
+/// OFFICIAL AUTH
+// import 'package:extension_google_sign_in_as_googleapis_auth/extension_google_sign_in_as_googleapis_auth.dart';
+// import 'package:firebase_auth/firebase_auth.dart' as f_a;
+// import 'package:firebase_ui_auth/firebase_ui_auth.dart' as fui;
+// import 'package:firebase_ui_oauth_apple/firebase_ui_oauth_apple.dart';
+// import 'package:firebase_ui_oauth_facebook/firebase_ui_oauth_facebook.dart';
+// import 'package:firebase_ui_oauth_google/firebase_ui_oauth_google.dart';
+import 'package:flutter/foundation.dart';
+// import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
+// import 'package:google_sign_in/google_sign_in.dart';
+import 'package:googleapis_auth/googleapis_auth.dart'; // as gapis;
+// import 'package:sign_in_with_apple/sign_in_with_apple.dart';
+/// OFFICIAL FIRE
+import 'package:firebase_core/firebase_core.dart';
+// import 'package:cloud_firestore/cloud_firestore.dart' as cloud;
+/// OFFICIAL REAL
+// import 'dart:convert';
+// import 'package:firebase_database/firebase_database.dart' as f_db;
+import 'package:http/http.dart' as http;
+/// OFFICIAL STORAGE
+// ignore: unnecessary_import
+// import 'dart:typed_data';
+// import 'package:firebase_storage/firebase_storage.dart' as f_s;
+// -----------------------------------------------------------------------------
+
+/// EXPORTS
+
+// --------------------
+/// AUTH
+// export 'package:firebase_auth/firebase_auth.dart';
+/// FIRE
+// export 'package:firebase_core/firebase_core.dart';
+// export 'package:cloud_firestore/cloud_firestore.dart';
+/// STORAGE
+// export 'package:firebase_storage/firebase_storage.dart';
+// -----------------------------------------------------------------------------
+
+/// FOUNDATION
+
+// --------------------
+/// NATIVE
+part 'a_foundation/a_native_firebase_initializer.dart';
+part 'a_foundation/b_native_authing.dart';
+part 'a_foundation/c_native_fire.dart';
+part 'a_foundation/d_native_real.dart';
+part 'a_foundation/e_native_storage.dart';
+// -----------------------------------------------------------------------------
+
+/// MODELS
+
+// --------------------
+/// AUTHING
+part 'b_models/b_fire/a_authing/sign_in_method.dart';
+part 'b_models/b_fire/a_authing/auth_model.dart';
+part 'b_models/a_authing/social_keys.dart';
+/// FIRE
+part 'b_models/b_fire/fire_finder.dart';
+part 'b_models/b_fire/fire_query_model.dart';
+part 'b_models/b_fire/fire_comparison_enum.dart';
+part 'b_models/b_fire/query_order_by.dart';
+/// REAL
+part 'b_models/c_real/real_query_model.dart';
+/// STORAGE
+part 'b_models/d_storage/storage_meta_model.dart';
+// -----------------------------------------------------------------------------
+
+/// HELPERS
+
+// --------------------
+/// AUTHING
+part 'c_helpers/authing/auth_error.dart';
+part 'c_helpers/authing/auth_blog.dart';
+/// MAPPERS
+part 'c_helpers/mappers/official_fire_mapper.dart';
+part 'c_helpers/native_fire_mapper.dart';
+/// STORAGE
+part 'c_helpers/storage/storage_error.dart';
+// -----------------------------------------------------------------------------
+
+/// WIDGETS
+
+// --------------------
+/// SCREENS
+// --------------------
+/// BUTTONS
+part 'd_widgets/b_buttons/official_social_auth_button/auth_button_box.dart';
+part 'd_widgets/b_buttons/official_social_auth_button/social_auth_button.dart';
+// -----------------------------------------------------------------------------
+
+/// STREAMERS
+
+// --------------------
+/// FIRE STREAMERS
+part 'e_streamers/fire_coll_streamer.dart';
+part 'e_streamers/fire_doc_streamer.dart';
+/// REAL STREAMERS
+part 'e_streamers/native_real_coll_streamer.dart';
+part 'e_streamers/native_real_doc_streamer.dart';
+part 'e_streamers/real_stream.dart';
+// -----------------------------------------------------------------------------
+
+/// PAGINATORS
+
+// --------------------
+/// FIRE PAGINATOR
+part 'f_paginators/fire_coll_paginator.dart';
+part 'f_paginators/pagination_controller.dart';
+/// REAL PAGINATOR
+part 'f_paginators/real_coll_paginator.dart';
+/// HELPERS
+part 'f_paginators/scroll_listeners.dart';
+// -----------------------------------------------------------------------------
