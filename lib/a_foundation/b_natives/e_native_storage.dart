@@ -1,4 +1,4 @@
-part of super_fire;
+part of native_fire;
 
 /// => TAMAM
 class NativeStorage {
@@ -107,7 +107,7 @@ class NativeStorage {
 
           if (_ref != null){
 
-            final f_d.SettableMetadata? _meta = StorageMetaModel.toNativeSettableMetadata(
+            final f_d.SettableMetadata? _meta = NativeStorageMetaModelMethods.toNativeSettableMetadata(
               meta: meta,
               bytes: bytes,
               // extraData:
@@ -345,7 +345,7 @@ class NativeStorage {
 
               final f_d.FullMetadata _meta = await _ref.getMetadata();
 
-              _output = StorageMetaModel.decipherNativeFullMetaData(
+              _output = NativeStorageMetaModelMethods.decipherNativeFullMetaData(
                 fullMetadata: _meta,
               );
 
@@ -378,7 +378,7 @@ class NativeStorage {
           if (_ref != null) {
             final f_d.FullMetadata _meta = await _ref.getMetadata();
 
-            _output = StorageMetaModel.decipherNativeFullMetaData(
+            _output = NativeStorageMetaModelMethods.decipherNativeFullMetaData(
               fullMetadata: _meta,
             );
           }
@@ -423,7 +423,7 @@ class NativeStorage {
 
             if (_bytes != null) {
 
-              final f_d.SettableMetadata? _meta = StorageMetaModel.toNativeSettableMetadata(
+              final f_d.SettableMetadata? _meta = NativeStorageMetaModelMethods.toNativeSettableMetadata(
                 bytes: _bytes,
                 meta: meta,
               );
@@ -467,7 +467,7 @@ class NativeStorage {
 
             if (_bytes != null){
 
-              final f_d.SettableMetadata? _meta = StorageMetaModel.toNativeSettableMetadata(
+              final f_d.SettableMetadata? _meta = NativeStorageMetaModelMethods.toNativeSettableMetadata(
                 bytes: _bytes,
                 meta: meta,
               );

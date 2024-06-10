@@ -1,4 +1,4 @@
-part of super_fire;
+part of native_fire;
 
 /// => TAMAM
 class NativeAuthing{
@@ -39,7 +39,7 @@ class NativeAuthing{
 
         final fd_u.User? _user =  await NativeFirebase.getAuthFire()?.signInAnonymously();
 
-        _output = AuthModel.getAuthModelFromFiredartUser(
+        _output = NativeAuthModelMethods.getAuthModelFromFiredartUser(
           user: _user,
           signInMethod: SignInMethod.anonymous,
         );
@@ -182,7 +182,7 @@ class NativeEmailAuthing {
 
           blog('firedart user : ${_user?.id}  : fire_dart user : ${_realUserCred?.user?.uid}');
 
-          _output = AuthModel.getAuthModelFromFiredartUser(
+          _output = NativeAuthModelMethods.getAuthModelFromFiredartUser(
             user: _user,
             signInMethod: SignInMethod.password,
           );
@@ -228,7 +228,7 @@ class NativeEmailAuthing {
             );
           }
 
-          _output = AuthModel.getAuthModelFromFiredartUser(
+          _output = NativeAuthModelMethods.getAuthModelFromFiredartUser(
             user: _user,
             signInMethod: SignInMethod.password,
           );

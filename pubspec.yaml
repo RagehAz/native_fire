@@ -14,6 +14,7 @@ dependencies:
   # ------------------------------------
 #  firebase_dart: ^1.1.4
   firedart: ^0.9.8
+  http: ^1.1.0
   # ------------------------------------
   fire:
     path: D:/projects/packages/fire

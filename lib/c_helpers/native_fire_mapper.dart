@@ -1,4 +1,4 @@
-part of super_fire;
+part of native_fire;
 
 /// => TAMAM
 class _NativeFireMapper {

@@ -1,4 +1,4 @@
-part of super_fire;
+part of native_fire;
 
 /// => TAMAM
 class NativeFire {
@@ -397,7 +397,7 @@ class NativeFire {
 
         /// ASSIGN SEARCH FINDERS
         if (Lister.checkCanLoop(finders) == true) {
-          query = FireFinder.createNativeCompositeQueryByFinders(query: query, finders: finders);
+          query = NativeFireFinderMethods.createNativeCompositeQueryByFinders(query: query, finders: finders);
         }
 
         /// ORDER BY A FIELD NAME

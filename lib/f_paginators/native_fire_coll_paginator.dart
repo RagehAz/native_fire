@@ -1,8 +1,8 @@
-part of super_fire;
+part of native_fire;
 
-class FireCollPaginator extends StatefulWidget {
+class NativeFireCollPaginator extends StatefulWidget {
   /// --------------------------------------------------------------------------
-  const FireCollPaginator({
+  const NativeFireCollPaginator({
     required this.paginationQuery,
     required this.builder,
     required this.paginationController,
@@ -27,11 +27,11 @@ class FireCollPaginator extends StatefulWidget {
       ) builder;
   /// --------------------------------------------------------------------------
   @override
-  _FireCollPaginatorState createState() => _FireCollPaginatorState();
+  _NativeFireCollPaginatorState createState() => _NativeFireCollPaginatorState();
   /// --------------------------------------------------------------------------
 }
 
-class _FireCollPaginatorState extends State<FireCollPaginator> {
+class _NativeFireCollPaginatorState extends State<NativeFireCollPaginator> {
   // -----------------------------------------------------------------------------
   late PaginationController _paginatorController;
   StreamSubscription? _streamSub;
@@ -91,7 +91,7 @@ class _FireCollPaginatorState extends State<FireCollPaginator> {
   }
   // --------------------
   @override
-  void didUpdateWidget(covariant FireCollPaginator oldWidget) {
+  void didUpdateWidget(covariant NativeFireCollPaginator oldWidget) {
     
     asyncInSync(() async {
 
@@ -172,11 +172,11 @@ class _FireCollPaginatorState extends State<FireCollPaginator> {
 
     if (widget.streamQuery != null){
 
-      final Stream<List<Map<String, dynamic>>>? _stream = Fire.streamColl(
+      final Stream<List<Map<String, dynamic>>>? _stream = NativeFire.streamColl(
         queryModel: widget.streamQuery!,
       );
 
-      _streamSub = FireCollStreamer.initializeStreamListener(
+      _streamSub = NativeFireCollStreamer.initializeStreamListener(
         stream: _stream,
         mounted: mounted,
         oldMaps: _streamOldMaps,
@@ -228,58 +228,9 @@ class _FireCollPaginatorState extends State<FireCollPaginator> {
     
     await _triggerLoading(setTo: true);
 
-    if (FirebaseInitializer.isUsingOfficialPackages() == true){
-      await _readMoreOfficial();
-    }
-
-    else {
-      await _readMoreNative();
-    }
+    await _readMoreNative();
 
     await _triggerLoading(setTo: false);
-
-  }
-  // --------------------
-  /// TESTED : WORKS PERFECT
-  Future<void> _readMoreOfficial() async {
-    
-    /// CAN KEEP READING
-    if (_paginatorController.canKeepReading.value  == true){
-
-      final List<Map<String, dynamic>>? _nextMaps = await Fire.readColl(
-        queryModel: widget.paginationQuery,
-        startAfter: _paginatorController.startAfter.value,
-        addDocSnapshotToEachMap: true,
-        onError: widget.onError,
-      );
-
-      if (Lister.checkCanLoop(_nextMaps) == true){
-
-        PaginationController.insertMapsToPaginator(
-          mapsToAdd: _nextMaps,
-          controller: _paginatorController,
-          mounted: mounted,
-        );
-
-      }
-
-      else {
-        setNotifier(
-            notifier: _paginatorController.canKeepReading,
-            mounted: mounted,
-            value: false
-        );
-      }
-
-    }
-
-    /// NO MORE MAPS TO READ
-    else {
-      blog('FireCollPaginator : _readMore : _canKeepReading : ${_paginatorController.canKeepReading.value} '
-          'isPaginating : ${_paginatorController.isPaginating}'
-      );
-    }
-
 
   }
   // --------------------

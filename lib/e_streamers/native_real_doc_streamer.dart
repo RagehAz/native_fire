@@ -1,4 +1,4 @@
-part of super_fire;
+part of native_fire;
 
 class NativeRealDocStreamer extends StatelessWidget {
   /// --------------------------------------------------------------------------
@@ -36,9 +36,9 @@ class NativeRealDocStreamer extends StatelessWidget {
 /// --------------------------------------------------------------------------
 }
 
-class NativeRealPathStreamer extends StatelessWidget {
+class RealPathStreamer extends StatelessWidget {
   /// --------------------------------------------------------------------------
-  const NativeRealPathStreamer({
+  const RealPathStreamer({
     required this.path,
     required this.builder,
     super.key

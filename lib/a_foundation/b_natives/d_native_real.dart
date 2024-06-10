@@ -1,4 +1,4 @@
-part of super_fire;
+part of native_fire;
 
 /// => TAMAM
 class NativeReal {
@@ -288,7 +288,7 @@ class NativeReal {
       onError: _onRealError,
       functions: () async {
 
-        final f_d.Query? _query = RealQueryModel.createNativeRealQuery(
+        final f_d.Query? _query = NativeRealQueryMethods.createNativeRealQuery(
           queryModel: realQueryModel,
           lastMap: startAfter,
         );
