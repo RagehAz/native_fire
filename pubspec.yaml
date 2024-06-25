@@ -1,6 +1,6 @@
 name: native_fire
 description: "The Native Implementation of Fire packages for Windows"
-version: 0.0.1
+version: 4.2.0
 publish_to: "none"
 homepage: https://github.com/RagehAz/native_fire.git
 # --------------------------------------------------------------------------------
@@ -15,11 +15,6 @@ dependencies:
   firebase_dart: ^1.1.4
   firedart: ^0.9.8
   http: ^1.1.0
-  # ------------------------------------
-  fire:
-    path: D:/projects/bldrs_packs/fire
-  #    git:
-  #      url: https://github.com/RagehAz/fire.git
   # ------------------------------------
   basics:
     path: D:/projects/bldrs_packs/basics

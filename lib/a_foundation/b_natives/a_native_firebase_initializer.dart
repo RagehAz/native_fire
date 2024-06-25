@@ -17,7 +17,7 @@ class NativeFirebase {
   // --------------------
   /// TESTED : WORKS PERFECT
   static Future<void> initialize({
-    required FirebaseOptions options,
+    required f_d.FirebaseOptions options,
     required String? appName,
     String? persistentStoragePath,
   }) async {
@@ -76,7 +76,7 @@ class NativeFirebase {
   /// TESTED : WORKS PERFECT
   Future<f_d.FirebaseApp> _initializeApp({
     required String? persistentStoragePath,
-    required FirebaseOptions options,
+    required f_d.FirebaseOptions options,
     required String? appName,
   }) async {
 

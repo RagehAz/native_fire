@@ -33,7 +33,7 @@ class NativeAuthing{
     AuthModel? _output;
 
     await tryAndCatch(
-      invoker: 'NativeAuthing.anonymousSignin',
+      invoker: 'NativeAuthing.anonymousSignIn',
       onError: onError,
       functions: () async {
 
