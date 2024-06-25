@@ -121,7 +121,7 @@ class NativeAuthing{
   // --------------------
   /// TESTED : WORKS PERFECT
   static Future<String?> getAuthEmail() async {
-     final fd_u.User? _user = await _getUser();
+     final fd_u.User? _user = await getUser();
      return _user?.email;
   }
   // -----------------------------------------------------------------------------
@@ -130,7 +130,7 @@ class NativeAuthing{
 
   // -------------------
   /// TESTED : WORKS PERFECT
-  static Future<fd_u.User?> _getUser() async {
+  static Future<fd_u.User?> getUser() async {
     fd_u.User? _user;
 
     await tryAndCatch(

@@ -190,6 +190,26 @@ class NativeStorage {
     final String? _url = await _createURLByRef(ref: _ref);
     return _url;
   }
+  // --------------------
+  /// TESTED: WORKS PERFECT
+  static Future<String?> createURLByNodes({
+    required String? coll,
+    required String? doc, // without extension
+  }) async {
+
+    if (coll != null && doc != null){
+      final String? _url = await createURLByPath(
+        path: 'storage/$coll/$doc',
+      );
+
+      return _url;
+    }
+
+    else {
+      return null;
+    }
+
+  }
   // -----------------------------------------------------------------------------
 
   /// READ DOC
