@@ -1,13 +1,9 @@
 part of native_fire;
 
 /// => TAMAM
-class NativeStorage {
+abstract class NativeStorage {
   // -----------------------------------------------------------------------------
   /// Note : use picName without file extension <---------------
-  // -----------------------------------------------------------------------------
-
-  const NativeStorage();
-
   // -----------------------------------------------------------------------------
 
   /// f_d.REFERENCES

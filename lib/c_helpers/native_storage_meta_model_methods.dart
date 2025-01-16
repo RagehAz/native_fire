@@ -1,10 +1,6 @@
 part of native_fire;
 
-class NativeStorageMetaModelMethods{
-  // -----------------------------------------------------------------------------
-
-  const NativeStorageMetaModelMethods();
-
+abstract class NativeStorageMetaModelMethods{
   // -----------------------------------------------------------------------------
 
   ///

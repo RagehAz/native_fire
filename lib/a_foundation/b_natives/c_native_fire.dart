@@ -1,11 +1,7 @@
 part of native_fire;
 
 /// => TAMAM
-class NativeFire {
-  // -----------------------------------------------------------------------------
-
-  const NativeFire();
-
+abstract class NativeFire {
   // -----------------------------------------------------------------------------
 
   /// REFERENCE

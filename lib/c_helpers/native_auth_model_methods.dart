@@ -1,10 +1,6 @@
 part of native_fire;
 
-class NativeAuthModelMethods {
-  // -----------------------------------------------------------------------------
-
-  const NativeAuthModelMethods();
-
+abstract class NativeAuthModelMethods {
   // --------------------
   ///
   static AuthModel? getAuthModelFromFiredartUser({

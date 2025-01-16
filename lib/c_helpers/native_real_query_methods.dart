@@ -1,10 +1,6 @@
 part of native_fire;
 
-class NativeRealQueryMethods {
-  // -----------------------------------------------------------------------------
-
-  const NativeRealQueryMethods();
-
+abstract class NativeRealQueryMethods {
   // -----------------------------------------------------------------------------
 
   ///

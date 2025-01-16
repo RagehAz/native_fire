@@ -1,11 +1,7 @@
 part of native_fire;
 
 /// => TAMAM
-class NativeAuthing{
-  // -----------------------------------------------------------------------------
-
-  const NativeAuthing();
-
+abstract class NativeAuthing{
   // -----------------------------------------------------------------------------
 
   /// USER ID
@@ -146,11 +142,7 @@ class NativeAuthing{
 }
 
 /// => TAMAM
-class NativeEmailAuthing {
-  // -----------------------------------------------------------------------------
-
-  const NativeEmailAuthing();
-
+abstract class NativeEmailAuthing {
   // -----------------------------------------------------------------------------
 
   /// SIGN IN

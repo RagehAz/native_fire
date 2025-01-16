@@ -1,10 +1,6 @@
 part of native_fire;
 
-class NativeFireFinderMethods {
-  // -----------------------------------------------------------------------------
-
-  const NativeFireFinderMethods();
-
+abstract class NativeFireFinderMethods {
   // -----------------------------------------------------------------------------
 
   ///

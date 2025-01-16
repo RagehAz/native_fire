@@ -35,7 +35,7 @@ import 'package:firedart/firedart.dart' as fd;
 import 'package:firebase_dart/firebase_dart.dart' as f_d; // https://github.com/appsup-dart/firebase_dart/issues/53
 import 'package:firedart/auth/user_gateway.dart' as fd_u;
 import 'package:flutter/foundation.dart';
-import 'package:http/http.dart' as http;
+import 'package:basics/exports/http.dart' as http;
 // -----------------------------------------------------------------------------
 
 /// FOUNDATION

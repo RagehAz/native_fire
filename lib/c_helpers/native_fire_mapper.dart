@@ -1,11 +1,7 @@
 part of native_fire;
 
 /// => TAMAM
-class _NativeFireMapper {
-  // -----------------------------------------------------------------------------
-
-  const _NativeFireMapper();
-
+abstract class _NativeFireMapper {
   // -----------------------------------------------------------------------------
   /// TESTED : WORKS PERFECT
   static List<Map<String, dynamic>> getMapsFromNativePage({
